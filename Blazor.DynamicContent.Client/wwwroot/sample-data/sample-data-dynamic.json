@@ -1,0 +1,129 @@
+[
+  {
+    "id": "ab7ac8dc-a7a7-4944-a612-ac4bcef33a5a",
+    "sectionName": "Persoenliche Daten",
+    "components": [
+      {
+        "id": "587867b3-0d2a-4609-b74c-52bc9c3ebd3b",
+        "fieldId": "firstname",
+        "componentType": "textbox",
+        "parameters": {
+          "Label": "Vorname",
+          "Placeholder": "Geben Sie ihren Vornamen ein",
+          "Value": "Patrick"
+        }
+      },
+      {
+        "id": "c50cfeb4-8c6f-4c97-8730-08056472a313",
+        "fieldId": "lastname",
+        "componentType": "textbox",
+        "parameters": {
+          "Label": "Nachname",
+          "Placeholder": "Geben Sie ihren Nachnamen ein",
+          "Value": "Jahr"
+        }
+      },
+      {
+        "id": "bc52c39d-41f4-4686-b47b-eb5c7878214e",
+        "fieldId": "birthdate",
+        "componentType": "date",
+        "parameters": {
+          "Label": "Geburtsdatum",
+          "Placeholder": "Geben Sie ihr Geburtsdatum ein",
+          "Date": "1989-08-30T00:00:00"
+        }
+      },
+      {
+        "id": "9b401776-4025-4c74-9fb0-acdac346335c",
+        "fieldId": "street",
+        "componentType": "textbox",
+        "parameters": {
+          "Label": "Strasse",
+          "Placeholder": "Geben Sie die Strasse ein"
+        }
+      },
+      {
+        "id": "f0570b8c-c993-44b4-a4c7-4c60ec18dd6c",
+        "fieldId": "city",
+        "componentType": "textbox",
+        "parameters": {
+          "Label": "Stadt",
+          "Placeholder": "Geben Sie die Stadt ein"
+        }
+      }
+    ]
+  },
+  {
+    "id": "8ea4a1af-43fb-4040-90c2-2a2d3afe2d5d",
+    "sectionName": "Reisedaten",
+    "components": [
+      {
+        "id": "4fd30143-24b5-4482-8908-5171f0669ca6",
+        "fieldId": "dateOfArrival",
+        "componentType": "date",
+        "parameters": {
+          "Label": "Anreise Datum"
+        }
+      },
+      {
+        "id": "f2fbff14-7255-45a7-85f8-6e2cb559c39c",
+        "fieldId": "dateOfDeparture",
+        "componentType": "date",
+        "parameters": {
+          "Label": "Abreise Datum"
+        }
+      }
+    ]
+  },
+  {
+    "id": "8b6d07d0-c0b5-46da-85fa-c0489276c989",
+    "sectionName": "Flugdaten",
+    "components": [
+      {
+        "id": "4fd30143-24b5-4482-8908-5171f0669ca6",
+        "fieldId": "departureAirport",
+        "componentType": "dropdown",
+        "parameters": {
+          "Label": "Abflughafen",
+          "Value": "FRA",
+          "Items": [
+            {
+              "key": "FRA",
+              "value": "Frankfurt International Airport"
+            },
+            {
+              "key": "BES",
+              "value": "Berlin-Schonefeld International Airport"
+            },
+            {
+              "key": "HAM",
+              "value": "Hamburg Airport"
+            }
+          ]
+        }
+      },
+      {
+        "id": "38b3cb8a-25b0-48cc-a47f-59e0bb4dbf06",
+        "fieldId": "arrivalAirport",
+        "componentType": "dropdown",
+        "parameters": {
+          "Label": "Ankunftsflughafen",
+          "Items": [
+            {
+              "key": "FRA",
+              "value": "Frankfurt International Airport"
+            },
+            {
+              "key": "BES",
+              "value": "Berlin-Schonefeld International Airport"
+            },
+            {
+              "key": "HAM",
+              "value": "Hamburg Airport"
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

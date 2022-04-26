@@ -1,0 +1,15 @@
+﻿@page "/render-fragment"
+@using Blazor.DynamicContent.Client.Utils
+
+<PageTitle>RenderFragment</PageTitle>
+
+@if (_sections.Length > 0)
+{
+    <MudForm Model="@_model">
+        @CreateForm()
+    </MudForm>
+
+    <div class="action">
+        <MudFab Icon="@Icons.Material.Filled.Save" Color="Color.Secondary" IconSize="Size.Medium" OnClick="EventUtils.AsNonRenderingEventHandler(SubmitData)"></MudFab>
+    </div>
+}

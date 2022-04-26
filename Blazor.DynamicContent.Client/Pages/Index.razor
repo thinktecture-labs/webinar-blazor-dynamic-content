@@ -1,0 +1,60 @@
+﻿@page "/"
+
+<PageTitle>Übersicht Dynamic Content</PageTitle>
+
+<MudGrid Spacing="3" Justify="Justify.Center">
+    <MudItem>
+        <MudPaper Height="180px" Width="250px">
+            <MudCard Elevation="0" Class="pa-0">
+                <MudCardContent>
+                    <MudText>DynamicComponent</MudText>
+                    <MudText Typo="Typo.body2">Dynamischer Inhalt mit Hilfe der DynamicComponent aus .NET 6</MudText>
+                </MudCardContent>
+                <MudCardActions>
+                    <MudButton Variant="Variant.Text" Color="Color.Primary" OnClick="@(() => NavigateTo("dynamic-component"))">Learn More</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudPaper>
+    </MudItem>
+
+    <MudItem>
+        <MudPaper Height="180px" Width="250px">
+            <MudCard Elevation="0" Class="pa-0">
+                <MudCardContent>
+                    <MudText>RenderFragment</MudText>
+                    <MudText Typo="Typo.body2">Dynamischer Inhalt mit Hilfe der von RenderFragments.</MudText>
+                </MudCardContent>
+                <MudCardActions>
+                    <MudButton Variant="Variant.Text" Color="Color.Primary" OnClick="@(() => NavigateTo("render-fragment"))">Learn More</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudPaper>
+    </MudItem>
+</MudGrid>
+
+@if (_items.Count > 0)
+{
+    <MudText Typo="Typo.h5">Gebuchte Flüge</MudText>
+
+    <Virtualize Items="_items" Context="dynamicModel">
+        <MudCard Class="my-4" Style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
+            @foreach (var keyValue in dynamicModel)
+            {
+                <div class="py-1 px-4" > 
+                    <MudText Style="text-transform: capitalize" Typo="Typo.caption">@keyValue.Key</MudText>
+                    @if (keyValue.Value is DateTime?)
+                    {
+                        <MudText Typo="Typo.body1">@(((DateTime?)keyValue.Value).Value.ToShortDateString())</MudText>
+
+                    }
+                    else
+                    {
+                        <MudText Typo="Typo.body1">@(String.IsNullOrWhiteSpace(keyValue.Value?.ToString()) ? "----" : keyValue.Value)</MudText>
+                    }
+                </div>
+            }
+    </MudCard>
+</Virtualize>
+}
+
+

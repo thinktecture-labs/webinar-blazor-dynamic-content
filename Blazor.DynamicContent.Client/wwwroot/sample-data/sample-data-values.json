@@ -1,0 +1,11 @@
+{
+  "firstname": "Patrick",
+  "lastname": "Jahr",
+  "birthdate": "30/08/1989",
+  "street": "Zimmerstr. 6",
+  "city": "Karlsruhe",
+  "dateOfArrival": "07/04/2022",
+  "dateOfDeparture": "20/04/2022",
+  "departureAirport": "FRA",
+  "arrivalAirport": "HAM"
+}

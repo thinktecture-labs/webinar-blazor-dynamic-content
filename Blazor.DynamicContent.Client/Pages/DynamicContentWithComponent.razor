@@ -1,0 +1,26 @@
+﻿@page "/dynamic-component"
+
+<PageTitle>DynamicComponent</PageTitle>
+
+@if (_accessor != null)
+{
+    <EditForm Model="_model" OnValidSubmit="Save">
+        @if (_sections.Count() > 0)
+        {
+            <MudExpansionPanels MultiExpansion="true">
+                @foreach (var test in _sections)
+                {
+                    <MudExpansionPanel Text="@test.SectionName" IsInitiallyExpanded="true">
+                        @foreach (var component in test.Components)
+                        {
+                            <DynamicComponent Type="component.DynamicComponentType" Parameters="component.Parameters"></DynamicComponent>
+                        }
+                    </MudExpansionPanel>
+                }
+            </MudExpansionPanels>
+            <div class="action">
+                <MudFab ButtonType="ButtonType.Submit" Icon="@Icons.Material.Filled.Save" Color="Color.Secondary" IconSize="Size.Medium"></MudFab>
+            </div>
+        }
+    </EditForm>
+}
